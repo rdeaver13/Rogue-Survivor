@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3b7kvqrvjo2f"]
+
+[sub_resource type="TileSet" id="TileSet_b15id"]
+
+[node name="Level Map" type="Node2D"]
+
+[node name="Frontground Tiles" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_b15id")
+
+[node name="Background Tiles" type="TileMapLayer" parent="Frontground Tiles"]
