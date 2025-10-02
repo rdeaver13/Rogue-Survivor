@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cw03ktbm4iflt" path="res://Assets/Tiles/Terrain Sprite Sheet.png" id="1_ny8ne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xd6f"]
-resource_name = "Map Tiles"
+resource_name = "(23.4, 5.599995)"
 texture = ExtResource("1_ny8ne")
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0

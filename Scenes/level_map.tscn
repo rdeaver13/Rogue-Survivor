@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=4 uid="uid://b3b7kvqrvjo2f"]
+[gd_scene load_steps=3 format=4 uid="uid://b3b7kvqrvjo2f"]
 
 [ext_resource type="TileSet" uid="uid://e1us1jlw2852" path="res://Assets/Tiles/map_tiles.tres" id="1_ijhud"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ijhud"]
 
 [node name="Level Map" type="Node2D"]
 
@@ -11,3 +13,32 @@ tile_set = ExtResource("1_ijhud")
 [node name="Foreground Tiles" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAEAAMAAAAMAAwAAAD7//z/AAAMAAwAAAAMAPD/AAAMAAwAAAAHAPz/AAAMAAwAAADu//D/AAAMAAwAAADs//z/AAAMAAwAAAD2/wUAAAAMAAwAAAD8/+7/AAAMAAwAAAAYAA4AAAAMAAwAAAD6/xcAAAAMAAwAAADd/woAAAAMAAwAAADi//j/AAAMAAwAAADp/+T/AAAMAAwAAAAGANj/AAAMAAwAAAAdAO//AAAMAAwAAAAqAAYAAAAMAAwAAAAcABkAAAAMAAwAAAAUACgAAAAMAAwAAAD3/zEAAAAMAAwAAADj/ykAAAAMAAwAAADX/xgAAAAMAAwAAADa////AAAMAAwAAADP/+//AAAMAAwAAADY/9f/AAAMAAwAAADr/9H/AAAMAAwAAAAdANT/AAAMAAwAAAAwANT/AAAMAAwAAAA0AAAAAAAMAAwAAAAxACgAAAAMAAwAAADs/xEAAAAMAAwAAAD5/ygAAAAGAAwAAADR/ycAAAAMAAwAAADY/+b/AAAMAAwAAAD2/9n/AAAMAAwAAAASAOD/AAAMAAwAAAArAOH/AAAMAAwAAAAIAM//AAAMAAwAAAAaAP3/AAAMAAwAAAAFAA8AAAAMAAwAAAAkADAAAAAMAAwAAAAKAC8AAAAMAAwAAAAsABgAAAAMAAwAAAAIABwAAAAMAAwAAAAsAPP/AAAMAAwAAAApAOr/AAAGAAwAAAAGANz/AAAGAAwAAADo//D/AAAGAAwAAADY/9T/AAAGAAwAAADe/xIAAAAGAAwAAAARAA0AAAAGAAwAAAAnACkAAAAGAAwAAAAJAOf/AAAoACYAAAAUAPb/AAAoACYAAAAsAPn/AAAoACYAAAAdAOX/AAAoACYAAAAYANT/AAAoACYAAAAuANv/AAAoACYAAAD0/9T/AAAoACYAAADe/93/AAAoACYAAADY//X/AAAoACYAAAD3/+f/AAAoACYAAADR/+D/AAAoACYAAADz//r/AAAoACYAAADW/wwAAAAoACYAAADw/wYAAAAoACYAAAD0/xkAAAAoACYAAADh/yIAAAAoACYAAADR/yMAAAAoACYAAADy/zAAAAAoACYAAAAIACkAAAAoACYAAAApAB4AAAAoACYAAAAQABoAAAAoACYAAAAJAAoAAAAoACYAAAAeAAMAAAAoACYAAAAmABQAAAAoACYAAAAlAAsAAAAeABEAAAAbACIAAAAeABEAAAAGABUAAAAeABEAAADw/wwAAAAeABEAAADn/y0AAAAeABEAAADc/x4AAAAeABEAAADT//j/AAAeABEAAADw/9r/AAAeABEAAADS/9j/AAAeABEAAAAPANP/AAAeABEAAAAEAO3/AAAeABEAAAAkAOb/AAAeABEAAAA=")
 tile_set = ExtResource("1_ijhud")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1736, -1.13687e-13)
+rotation = -1.5708
+scale = Vector2(23.4, 5.6)
+shape = SubResource("WorldBoundaryShape2D_ijhud")
+debug_color = Color(1, 0, 0, 0.705882)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1736)
+rotation = 3.14159
+scale = Vector2(23.4, 5.6)
+shape = SubResource("WorldBoundaryShape2D_ijhud")
+debug_color = Color(1, 0, 0, 0.705882)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1736, -4.15668e-13)
+rotation = 1.5708
+scale = Vector2(23.4, 5.6)
+shape = SubResource("WorldBoundaryShape2D_ijhud")
+debug_color = Color(1, 0, 0, 0.705882)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1736)
+scale = Vector2(23.4, 5.6)
+shape = SubResource("WorldBoundaryShape2D_ijhud")
+debug_color = Color(1, 0, 0, 0.705882)
