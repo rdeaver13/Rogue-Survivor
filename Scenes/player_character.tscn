@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://m4n4e47gh4"]
+
+[ext_resource type="Texture2D" uid="uid://cqpy15d7rgbxh" path="res://Assets/Sprites/Player Sprite Sheet.png" id="1_qcwfp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmdk4"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcwfp"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0f8b"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wko77"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(64, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb3n0"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(128, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ons1q"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajo0r"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(256, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flf3p"]
+atlas = ExtResource("1_qcwfp")
+region = Rect2(320, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcng2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmdk4")
+}],
+"loop": true,
+"name": &"startup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcwfp")
+}],
+"loop": true,
+"name": &"stopped",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0f8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wko77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb3n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ons1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajo0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flf3p")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 10.0
+}]
+
+[node name="Player Character" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_fcng2")
+animation = &"stopped"
