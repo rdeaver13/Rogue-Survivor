@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://m4n4e47gh4"]
+[gd_scene load_steps=13 format=3 uid="uid://m4n4e47gh4"]
 
+[ext_resource type="Script" uid="uid://bmvxrecq2m702" path="res://Scripts/player_character.gd" id="1_cmdk4"]
 [ext_resource type="Texture2D" uid="uid://cqpy15d7rgbxh" path="res://Assets/Sprites/Player Sprite Sheet.png" id="1_qcwfp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cmdk4"]
@@ -76,9 +77,31 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qcwfp"]
+radius = 5.0
+height = 28.0
+
 [node name="Player Character" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_cmdk4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_fcng2")
-animation = &"stopped"
+animation = &"startup"
+frame_progress = 0.477781
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_qcwfp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -14)
+zoom = Vector2(2, 2)
+limit_left = -2000
+limit_top = -2000
+limit_right = 2000
+limit_bottom = 2000
+limit_smoothed = true
+editor_draw_limits = true
